@@ -3,6 +3,7 @@ public  class  circle {
 	// radius -> double
 	// color -> string
 
+
 		double radius;
 		String color;
 

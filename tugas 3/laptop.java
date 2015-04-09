@@ -1,70 +1,102 @@
-class  leptop {
-
+class Laptop {
+	
 	private String merk;
 	private String warna;
 	private String wifi;
 	private int baterai;
 
-	public leptop()
-	{
-		merk	="thosiba";
-		warna	="putih";
-		wifi	="terhubung";
-		baterai	=50;
+	public Laptop(){
+			
+		merk = "toshiba";
+		warna = "biru";
+		wifi = "terhubung";	
+		baterai = 60;
 	}
-	public leptop(String merkinput, String warnainput)
-	{	merk	=merkinput;
-		warna	=warnainput;
+	
+
+	public Laptop(String merkInput, String warnaInput){
+		merk = merkInput;
+		warna = warnaInput ;
+	
+	}
+	public Laptop(String merkInput, String warnaInput, String wifiInput){
+		 merk = merkInput;
+		 warna = warnaInput;
+		 wifi = wifiInput;
 		
 	}
-	public leptop(String merkinput, String warnainput, String wifiinput)
-	{	merk	=merkinput;
-		warna	=warnainput;
-		wifi	=wifiinput;
-		
-	}
-	public leptop(String merkinput, String warnainput, String wifiinput, int bateraiinnput)
-	{	merk	=merkinput;
-		warna	=warnainput;
-		wifi	=wifiinput;
-		baterai	=bateraiinnput;
-
+	public Laptop(String merkInput, String warnaInput, String wifiInput, int bateraiInput){
+		 merk = merkInput;
+		 warna = warnaInput ;
+		 wifi = wifiInput;
+		 baterai = bateraiInput ;
 	}
 
-	 public void menyala()
-	 {
-	 	System.out.println("welcome to leptop");
-	 }
+	public void menyala(){
+
+		System.out.println("Welcome to the Laptop");
+	}
+
+	public void merk(){
+		System.out.println("Merk: "+merk);
+	}
+
+	public void warna(){
+
+		System.out.println("Warna laptop: "+warna);
+	}
+
+	public void mati(){
+
+		System.out.println("Have a nice Day");
+	}
 
 
-	 public void mati()
-	 {
-	 	System.out.println("thankyou have a nice day ");
+	public void indikatorBaterai(){
 
-	 }
+		System.out.println("Baterai tinggal "+baterai);
+	}
 
-	 public void indikatorbaterai(){
-	 	System.out.println("baterai : " + baterai + "%");
-	 }
+	public void indikatorWifi(){
 
-	 public void indikatorwifi(){
-	 	System.out.println("wifi : " + wifi + "%");
-	 }
+		System.out.println("Status Wifi: "+wifi);
+	}
 
-	 //setter and getter
-	 public String getmerk(){
-	 	return merk;
-	 }
+	public String getMerk(){
 
-	 public String getwarna(){
-	 	return warna;
+		return merk;
+	}  
 
-	 }
-	public int getbaterai(){
-	 	return baterai;
-	 }
+	public String getWarna(){
 
-	 public String getwifi(){
-	 	return wifi;
-	 }
+		return warna;
+	}
+
+	public String getWifi(){
+
+		return wifi;
+	}
+
+	public int getBaterai(){
+
+		return baterai;
+	}
+
+	public String setMerk(String merk){
+
+		return this.merk = merk;
+	}
+
+	public String setWarna(String warna){
+
+		return this.warna=warna;
+	}
+	public String setWifi(String wifi){
+
+		return this.wifi=wifi;
+	}
+	public int setBaterai(int baterai){
+
+		return this.baterai=baterai;
+	}
 }
