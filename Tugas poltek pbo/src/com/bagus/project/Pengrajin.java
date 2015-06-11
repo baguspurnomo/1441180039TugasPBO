@@ -9,6 +9,7 @@ public class Pengrajin {
     private int umurPengrajin;
     private char jenisKelamin;
     private String status;
+    private Gitar membuat;
 
     public Pengrajin(String namaPengrajin, String alamatPengrajin, int umurPengrajin) {
         this.namaPengrajin = namaPengrajin;
@@ -16,12 +17,13 @@ public class Pengrajin {
         this.umurPengrajin = umurPengrajin;
     }
 
-    public Pengrajin(String namaPengrajin, String alamatPengrajin, int umurPengrajin, char jenisKelamin, String status) {
+    public Pengrajin(String namaPengrajin, String alamatPengrajin, int umurPengrajin, char jenisKelamin, String status, Gitar membuat) {
         this.namaPengrajin = namaPengrajin;
         this.alamatPengrajin = alamatPengrajin;
         this.umurPengrajin = umurPengrajin;
         this.jenisKelamin = jenisKelamin;
         this.status = status;
+        this.membuat = membuat;
     }
 
     public String getNamaPengrajin() {
@@ -64,6 +66,15 @@ public class Pengrajin {
         this.status = status;
     }
 
+
+    public Gitar getMembuat() {
+        return membuat;
+    }
+
+    public void setMembuat(Gitar membuat) {
+        this.membuat = membuat;
+    }
+
     @Override
     public String toString() {
         return "Pengrajin{" +
@@ -72,6 +83,7 @@ public class Pengrajin {
                 ", umurPengrajin=" + umurPengrajin +
                 ", jenisKelamin=" + jenisKelamin +
                 ", status='" + status + '\'' +
+                ", membuat=" + membuat +
                 '}';
     }
 }
