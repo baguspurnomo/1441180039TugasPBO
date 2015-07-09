@@ -4,12 +4,18 @@ package Liga;
  * Created by Bagus on 7/5/2015.
  */
 public class Klub {
+
     private String namaKlub;
     private Divisi divisi;
     private Liga liga;
 
     public Klub(String namaKlub) {
         this.namaKlub = namaKlub;
+    }
+
+    public Klub(String namaKlub, Divisi divisi) {
+        this.namaKlub = namaKlub;
+        this.divisi = divisi;
     }
 
     public Klub(String namaKlub, Divisi divisi, Liga liga) {
@@ -34,18 +40,23 @@ public class Klub {
         this.divisi = divisi;
     }
 
-    public Liga getLiga() {
-        return liga;
+    public Liga getLiga() {        return liga;
     }
 
     public void setLiga(Liga liga) {
         this.liga = liga;
     }
 
+
+
     @Override
     public String toString() {
         return "Klub{" +
                 "namaKlub='" + namaKlub + '\'' +
+                ", divisi=" + divisi +
                 '}';
     }
+
+
 }
+

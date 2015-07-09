@@ -6,68 +6,71 @@ package Liga;
 public class TestLiga {
 
     public static void main(String[] args) {
-        // membuat objek "namaKelas variabel = new namaKelas()
-        Liga italy = new Liga("Italy");
 
-        Divisi seriA = new Divisi("seriA");
-        Divisi seriB = new Divisi("seriB");
+        Liga spanyol = new Liga("spanyol");
 
-        Klub acMilan = new Klub("ac Milan", seriA, italy);
-        Klub acRoma = new Klub("ac Roma", seriA, italy);
+        Divisi adelente = new Divisi("Divisi adelente");
+        Divisi bbva = new Divisi("BBVA");
 
-        Klub parma = new Klub("ac Roma", seriB, italy);
-        Klub fiorentina = new Klub("ac Roma", seriB, italy);
+        Klub bbva1 = new Klub("fc barcelona",bbva,spanyol);
+        Klub bbva2 = new Klub("atletico madrid",bbva, spanyol);
+        Klub adelente1 = new Klub("espanyol b",adelente,spanyol);
+        Klub adelente2 = new Klub("Granada",adelente, spanyol);
 
-//        memanggil " kelas.setapa yang mau dipanggil;
+        spanyol.setDaftarDivisi(adelente);
+        spanyol.setDaftarDivisi(bbva);
 
-        italy.setDaftarDivisi(seriA);
-        italy.setDaftarDivisi(seriB);
+        spanyol.setDaftarKlub(bbva1);
+        spanyol.setDaftarKlub(bbva2);
+        spanyol.setDaftarKlub(adelente1);
+        spanyol.setDaftarKlub(adelente2);
 
-        seriA.setDaftarKlub(acMilan);
-        seriA.setDaftarKlub(acRoma);
-
-        seriB.setDaftarKlub(parma);
-        seriB.setDaftarKlub(fiorentina);
-
-//        soal nomer 1. Get daftarDivisi by namaLiga
-
-        italy.getDaftarDivisi();
+        bbva.setDaftarKlub(bbva1);
+        bbva.setDaftarKlub(bbva2);
+        adelente.setDaftarKlub(adelente1);
+        adelente.setDaftarKlub(adelente2);
         System.out.println("1");
-        System.out.println(italy.getDaftarDivisi());
-        System.out.println("");
+        System.out.println("Liga : " +spanyol.getNamaLiga());
+        System.out.println("Divisi : " +spanyol.getDaftarDivisi());
 
-//        soal nomer 2. Get daftarKlub by namaLiga
-        italy.setDaftarKlub(acRoma);
+        System.out.println("\n");
         System.out.println("2");
-        System.out.println(italy.getDaftarKlub());
-        System.out.println("");
 
-//        soal nomer 3. Get daftarKlub by namaDivisi
+        System.out.println("Liga : " +spanyol.getNamaLiga());
+        System.out.println("Klub : " +spanyol.getDaftarKlub());
+        System.out.println("\n");
         System.out.println("3");
-        System.out.println(seriA.getDaftarKlub());
-        System.out.println("");
-
-//        soal nomer 4. Get Klub ini berada di Divisi mana by namaKlub
-        acMilan.getDivisi();
-        acMilan.getNamaKlub();
+        System.out.println("Liga : " +spanyol.getNamaLiga());
+        System.out.println("Klub : " +adelente.getDaftarKlub());
+        System.out.println("\n");
         System.out.println("4");
-        System.out.println(acMilan.getDivisi());
-        System.out.println(acMilan.getNamaKlub());
-        System.out.println("");
-
-//        soal nomer 5.Get Klub ini berada di Liga apa by namaKlub
-        acRoma.getLiga();
-        acRoma.getNamaKlub();
+        System.out.println("Liga : " +spanyol.getNamaLiga());
+        System.out.println("Klub : " +bbva.getDaftarKlub());
+        System.out.println("\n");
         System.out.println("5");
-        System.out.println(acRoma.getLiga());
-        System.out.println(acRoma.getNamaKlub());
-        System.out.println("");
-
-        System.out.println("Ini Tugas saya pak");
-
-
-
-
+        System.out.println("Liga : " +spanyol.getNamaLiga());
+        System.out.println("Klub : " +spanyol.getDaftarKlub());
+        System.out.println("\n");
+        System.out.println("6");
+        System.out.println("Liga : " +bbva1.getLiga());
+        System.out.println("Klub : " +bbva1.getNamaKlub());
+        System.out.println("Divisi : " +bbva1.getDivisi());
+        System.out.println("\n");
+        System.out.println("7");
+        System.out.println("Liga : " +bbva2.getLiga());
+        System.out.println("Klub : " +bbva2.getNamaKlub());
+        System.out.println("Divisi : " +bbva2.getDivisi());
+        System.out.println("\n");
+        System.out.println("8");
+        System.out.println("Liga : " + adelente1.getLiga());
+        System.out.println("Klub : " + adelente1.getNamaKlub());
+        System.out.println("Divisi : " + adelente1.getDivisi());
+        System.out.println("\n");
+        System.out.println("9");
+        System.out.println("Liga : " + adelente2.getLiga());
+        System.out.println("Klub : " + adelente2.getNamaKlub());
+        System.out.println("Divisi : " + adelente2.getDivisi());
+        System.out.println("\n");
     }
-
 }
+
